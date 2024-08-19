@@ -18,6 +18,7 @@ fr: # <---- change this to your locale code
   Total: Total
   TimeSec: Temps (sec)
   AverageSec: Moyenne (sec)
+  NinetyFifthPercentileSec: 95th Percentile(sec)
   MinTimeSec: Min temps (sec)
   MaxTimeSec: Max temps (sec)
   LastJobStatus: Dernier statut job

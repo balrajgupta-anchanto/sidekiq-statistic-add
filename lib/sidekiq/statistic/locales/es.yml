@@ -18,6 +18,7 @@ es: # <---- change this to your locale code
   Total: Total
   TimeSec: Tiempo(s)
   AverageSec: Promedio(s)
+  NinetyFifthPercentileSec: 95th Percentile(sec)
   MinTimeSec: Tiempo Mínimo(s)
   MaxTimeSec: Tiempo Máximo(s)
   LastJobStatus: Status del último trabajo

@@ -15,6 +15,7 @@ module Sidekiq
           max: max_runtime.round(3),
           min: min_runtime.round(3),
           average: average_runtime.round(3),
+          ninety_fifth_percentile: ninety_fifth_percentile.round(3),
           total: total_runtime.round(3)
         }
       end
@@ -41,6 +42,12 @@ module Sidekiq
         return 0.0 if count == 0
         averages.inject(:+) / count
       end
+      def ninety_fifth_percentile
+        ninety_fifth_percentile_values = values(:ninety_fifth_percentile).map(&:to_f)
+        size = ninety_fifth_percentile_values.count
+        ninety_fifth_percentile_values.sort[((size * 0.95).ceil) - 1] || 0.0
+      end
+        
 
     private
 

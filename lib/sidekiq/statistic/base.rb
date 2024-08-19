@@ -94,11 +94,14 @@ module Sidekiq
 
       def time_statistics(timeslist)
         total = timeslist.inject(:+)
+        size = timeslist.count
+        n95 = timeslist.sort[((size * 0.95).ceil) - 1]
 
         {
-          average_time: total / timeslist.count,
+          average_time: total / size,
           min_time: timeslist.min,
           max_time: timeslist.max,
+          ninety_fifth_percentile: n95,
           total_time: total
         }
       end

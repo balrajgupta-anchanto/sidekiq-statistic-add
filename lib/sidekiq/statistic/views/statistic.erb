@@ -50,6 +50,7 @@
         <th><%= t('Total') %></th>
         <th><%= t('TimeSec') %></th>
         <th><%= t('AverageSec') %></th>
+        <th><%= t('NinetyFifthPercentileSec') %></th>
         <th><%= t('MinTimeSec') %></th>
         <th><%= t('MaxTimeSec') %></th>
         <th><%= t('LastJobStatus') %></th>
@@ -67,6 +68,7 @@
           <td><%= worker[:number_of_calls][:total] %></td>
           <td><%= worker[:runtime][:total] %></td>
           <td><%= worker[:runtime][:average] %></td>
+          <td><%= worker[:runtime][:ninety_fifth_percentile] %></td>
           <td><%= worker[:runtime][:min] %></td>
           <td><%= worker[:runtime][:max] %></td>
           <td><%= worker[:last_job_status] %></td>
